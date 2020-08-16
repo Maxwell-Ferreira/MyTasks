@@ -16,17 +16,19 @@ const Body = () =>{
         {id: 6, name: "Sexta tarefa"},
     ]);
 
+    function newTask(){
+        
+    }
+
     function deleteTask(id){
         let currentTask = tasks.filter(task => task.id === id);
-        let newTasks = tasks;
-        newTasks.splice(newTasks.indexOf(currentTask[0]), 1); 
-        setTasks(newTasks);
-        console.log(tasks);
-    } 
+        tasks.splice(tasks.indexOf(currentTask[0]), 1); 
+        setTasks(current => [...current]);
+    }
 
-/*     const getTasks = tasks.map(task => (
+   const getTasks = tasks.map(task => (
         <Task key={task.id} content={task.name} onClick={() => deleteTask(task.id)}/>
-    )); */
+    ));
 
     return (
         <div className="body-container">
@@ -43,9 +45,7 @@ const Body = () =>{
                 </div>
             </div>
             <div className="tasks" id="tasks">
-                {tasks.map(task => (
-                    <Task key={task.id} content={task.name} onClick={() => deleteTask(task.id)}/>
-                ))}
+                {getTasks}
             </div>
         </div>
     )
