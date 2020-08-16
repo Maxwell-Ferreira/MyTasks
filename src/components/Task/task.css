@@ -1,0 +1,20 @@
+.task{
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #DDDDDD;
+    padding: 1rem 0;
+}
+
+.task .button-task{
+    margin-left: auto;
+}
+
+.task button{
+    background-color: #FF4136;
+    color: #fff;
+}
+
+.task button:hover{
+    background-color: #d1362e;
+}

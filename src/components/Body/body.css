@@ -1,0 +1,49 @@
+.body-container{
+    height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.body-top{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    padding: 1rem 2rem;
+}
+
+.body-top input{
+    border: none;
+    outline: none;
+    font-size: .8rem;
+    padding: .4rem;
+    border: 1px solid rgb(230, 230, 230);
+
+    margin-left: 1rem;
+}
+
+.body-top button{
+    background-color: #00305f;
+    color: #fff;
+
+    margin-left: .5rem;
+    cursor: pointer;
+}
+
+.body-top button:hover{
+    background-color: #002447;
+}
+
+.body-top .search-task{
+    margin-left: auto;
+}
+
+.tasks{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+}
