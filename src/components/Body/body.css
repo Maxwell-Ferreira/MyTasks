@@ -9,9 +9,15 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap;
 
     padding: 1rem 2rem;
+}
+
+.body-top .new-task{
+    display: flex;
+    align-items: center;
+
+    margin-right: auto;
 }
 
 .body-top input{
@@ -32,12 +38,8 @@
     cursor: pointer;
 }
 
-.body-top button:hover{
+.body-top .new-task button:hover{
     background-color: #002447;
-}
-
-.body-top .search-task{
-    margin-left: auto;
 }
 
 .tasks{

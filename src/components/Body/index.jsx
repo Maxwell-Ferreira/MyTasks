@@ -16,9 +16,9 @@ const Body = () =>{
         {id: 6, name: "Sexta tarefa"},
     ]);
 
-    function newTask(){
-        
-    }
+    const [newId, setNewId] = useState(7);
+
+    const [inputTask, setNewTask] = useState("asdadas");
 
     function deleteTask(id){
         let currentTask = tasks.filter(task => task.id === id);
@@ -30,13 +30,27 @@ const Body = () =>{
         <Task key={task.id} content={task.name} onClick={() => deleteTask(task.id)}/>
     ));
 
+    const handleInputNewTask = (e) =>{
+        setNewTask(e.target.value);
+    }
+
+    const addNewTask = () =>{
+        setNewId(newId + 1);
+        console.log(newId);
+        let newTask = {id: newId, name: inputTask};
+        setTasks([...tasks, newTask]);
+        console.log(tasks);
+    }
+
     return (
         <div className="body-container">
             <div className="body-top">
-                <p>Adicionar Nova Tarefa:</p>
-                <div>
-                    <input type="text"/>
-                    <Button content="+"/>
+                <div className="new-task">
+                    <p>Adicionar Nova Tarefa:</p>
+                    <input type="text" value={inputTask} onChange={handleInputNewTask}/>
+                    <div className="inputButton" onClick={addNewTask}>
+                        <Button content="+" /> 
+                    </div>
                 </div>
                 <div className="search-task">
                     <span>Buscar Tarefa:</span>
