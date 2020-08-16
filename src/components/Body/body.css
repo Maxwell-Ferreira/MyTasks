@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
 
-    margin-right: auto;
+    width: 100%;
 }
 
 .body-top input{
@@ -26,6 +26,8 @@
     font-size: .8rem;
     padding: .4rem;
     border: 1px solid rgb(230, 230, 230);
+
+    width: 100%;
 
     margin-left: 1rem;
 }
@@ -48,4 +50,13 @@
     flex-direction: column;
 
     overflow-y: scroll;
+}
+
+@media(max-width: 700px){
+    .body-top .new-task{
+        flex-direction: column;
+    }
+    .body-top .new-task button{
+        margin-top: .5rem;
+    }
 }

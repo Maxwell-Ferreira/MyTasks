@@ -6,15 +6,50 @@
     padding: 1rem 0;
 }
 
-.task .button-task{
-    margin-left: auto;
+.task p{
+    padding-right: 1rem;
 }
 
-.task button{
+.task .button-task{
+    display: flex;
+    align-items: center;
+    
+}
+
+.task .button-task > button{
     background-color: #FF4136;
     color: #fff;
 }
 
-.task button:hover{
+.task .button-task > button:hover{
     background-color: #d1362e;
+}
+
+.task .is-done-button, .task .cancel-done-button{
+    margin-left: auto;
+    margin-right: .5rem;
+}
+
+.task .is-done-button button{
+    background-color: #2ECC40;
+    color: #fff;
+}
+
+.task .is-done-button button:hover{
+    background-color: #239731;
+}
+
+.task .cancel-done-button button{
+    color: #fff;
+    background-color: #FF851B;
+}
+
+.task .cancel-done-button button:hover{
+    background-color: #ca6a15;
+}
+
+.is-done p{
+    color: #505050;
+    text-decoration: line-through;
+    font-style: italic;
 }
